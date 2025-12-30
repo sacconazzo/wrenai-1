@@ -180,7 +180,7 @@ WrenAI richiede risorse significative. Assicurati che Docker abbia accesso a:
 
 ## Versioni dei Componenti
 
-Le versioni predefinite configurate in `.env.example`:
+Le versioni predefinite configurate nel file `.env.example` sono:
 
 - **WREN_PRODUCT_VERSION**: 0.29.1
 - **WREN_ENGINE_VERSION**: 0.22.0
@@ -188,6 +188,8 @@ Le versioni predefinite configurate in `.env.example`:
 - **WREN_UI_VERSION**: 0.32.2
 - **IBIS_SERVER_VERSION**: 0.22.0
 - **WREN_BOOTSTRAP_VERSION**: 0.1.5
+
+> **Nota**: Queste versioni possono essere aggiornate modificando le variabili corrispondenti nel file `.env`. Consulta il file `.env.example` per le versioni più recenti consigliate.
 
 ## Supporto e Documentazione
 
