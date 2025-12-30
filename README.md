@@ -173,8 +173,6 @@ WrenAI richiede risorse significative. Assicurati che Docker abbia accesso a:
 ├── docker-compose.yaml     # Configurazione Docker Compose
 ├── .env.example            # Esempio di file di configurazione
 ├── config.yaml             # Configurazione dei modelli AI e pipeline
-├── google-ai-studio.yaml   # Configurazione alternativa per Google AI Studio
-├── data/                   # Directory per i dati persistenti (creata automaticamente)
 └── README.md               # Questo file
 ```
 
