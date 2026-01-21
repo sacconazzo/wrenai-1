@@ -10,7 +10,7 @@ networks:
 services:
   bootstrap:
     image: ghcr.io/canner/wren-bootstrap:${WREN_BOOTSTRAP_VERSION}
-    restart: on-failure
+    restart: unless-stopped
     platform: ${PLATFORM}
     environment:
       DATA_PATH: /app/data
@@ -20,7 +20,7 @@ services:
 
   wren-engine:
     image: ghcr.io/canner/wren-engine:${WREN_ENGINE_VERSION}
-    restart: on-failure
+    restart: unless-stopped
     platform: ${PLATFORM}
     expose:
       - ${WREN_ENGINE_PORT}
@@ -35,7 +35,7 @@ services:
 
   ibis-server:
     image: ghcr.io/canner/wren-engine-ibis:${IBIS_SERVER_VERSION}
-    restart: on-failure
+    restart: unless-stopped
     platform: ${PLATFORM}
     expose:
       - ${IBIS_SERVER_PORT}
@@ -48,7 +48,7 @@ services:
 
   wren-ai-service:
     image: ghcr.io/canner/wren-ai-service:${WREN_AI_SERVICE_VERSION}
-    restart: on-failure
+    restart: unless-stopped
     platform: ${PLATFORM}
     expose:
       - ${WREN_AI_SERVICE_PORT}
@@ -71,7 +71,7 @@ services:
 
   qdrant:
     image: qdrant/qdrant:v1.11.0
-    restart: on-failure
+    restart: unless-stopped
     expose:
       - 6333
       - 6334
@@ -82,7 +82,7 @@ services:
 
   wren-ui:
     image: ghcr.io/canner/wren-ui:${WREN_UI_VERSION}
-    restart: on-failure
+    restart: unless-stopped
     platform: ${PLATFORM}
     environment:
       DB_TYPE: sqlite
